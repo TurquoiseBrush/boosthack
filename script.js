@@ -24,6 +24,7 @@ const previousTimesList = document.getElementById("previous-times-list");
 const submitButton = document.getElementById("submit");
 const newGameButton = document.getElementById("new-game-btn");
 const timerBar = document.getElementById("timer-bar");  // The timer progress bar
+const resultContainer = document.getElementById('result-container');  // Where results and combo will appear
 
 // Function to format time in MM:SS.mmm format (rounded to 3 decimal places)
 function formatTime(ms) {
@@ -99,7 +100,12 @@ function startTimer() {
             timerBar.style.width = `${remainingWidth}%`;  // Update the timer bar width
         } else if (timer === 0) {
             clearInterval(timerInterval);
+            // Show the correct combination when time runs out
+            resultContainer.innerHTML = `<div class="no-color">Time's up! The correct combination was: <strong>${target}</strong></div>`;
             alert("Time's up! Game Over.");
+            // Show the new game button after time runs out
+            newGameButton.style.display = 'block';  // Show the new game button
+            gamePaused = true; // Pause the game
         }
     }, 1000);
 }
@@ -115,7 +121,6 @@ document.addEventListener('keydown', (event) => {
 
         guesses++;  // Increment the number of guesses
 
-        const resultContainer = document.getElementById('result-container');
         let resultHTML = '';
         for (let i = 0; i < target.length; i++) {
             const currentDigit = guess[i];
