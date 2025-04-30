@@ -1,0 +1,215 @@
+/* Body setup */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Game container for centering all content */
+.game-container {
+    background-color: #222;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    width: 90%; /* Make it responsive */
+    max-width: 400px; /* Limit width to a max of 400px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin: 20px; /* Add some space around the container */
+}
+
+/* Header */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    margin-bottom: 15px;
+    font-size: 28px; /* Reduce font size */
+}
+
+/* Difficulty selection */
+.difficulty-container {
+    margin-bottom: 15px;
+}
+
+#difficulty {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #0ff;
+    border-radius: 5px;
+}
+
+/* Inputs container */
+#guess-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Styling for input fields */
+#guess-container input {
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    text-align: center;
+    font-size: 24px; /* Reduced font size */
+    border: none;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for inputs */
+#guess-container input:focus {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    background-color: #222;
+}
+
+/* Controls container (buttons) */
+.controls {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 16px; /* Reduced button font size */
+    margin: 8px;
+    background-color: #0ff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+button:hover {
+    background-color: #fff;
+    color: #0ff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+
+/* Result display */
+#result-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#result-container div {
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px; /* Reduced font size */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for result colors */
+.green {
+    background-color: #00ff00;
+    animation: pulseGreen 0.8s infinite;
+}
+
+.yellow {
+    background-color: #ffcc00;
+    animation: pulseYellow 0.8s infinite;
+}
+
+.no-color {
+    background-color: transparent;
+    animation: pulseNoColor 0.8s infinite;
+}
+
+/* Pulsing effect for results */
+@keyframes pulseGreen {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulseYellow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulseNoColor {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Timer */
+#timer {
+    color: #0ff;
+    font-size: 20px; /* Reduced font size */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    margin-top: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#guess-count {
+    color: #0ff;
+    font-size: 16px; /* Reduced font size */
+    margin-top: 10px;
+}
+
+/* Previous Times section */
+.previous-times {
+    margin-top: 20px;
+    color: #0ff;
+    width: 100%;
+    text-align: left;
+    padding-right: 15px;
+    max-height: 100px; /* Limit the height of the previous times container */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+#previous-times-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#previous-times-list li {
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 8px;
+}
+/* Timer Progress Bar */
+#timer-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #444;  /* Dark background for the bar */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#timer-bar {
+    width: 100%;  /* Start at 100% */
+    height: 100%;
+    background-color: #00fff7;  /* Neon color */
+    border-radius: 10px;
+    transition: width 1s linear;  /* Smooth shrinking */
+}
