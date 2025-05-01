@@ -213,3 +213,85 @@ button:hover {
     border-radius: 10px;
     transition: width 1s linear;  /* Smooth shrinking */
 }
+
+/* Home Page Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.home-buttons {
+    margin-top: 30px;
+}
+
+.home-buttons .btn {
+    background-color: #0ff;
+    color: #1a1a1a;
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-buttons .btn:hover {
+    background-color: #fff;
+    color: #0ff;
+}
+
+/* Game Page Styles (same as before) */
+.game-container {
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+button {
+    padding: 18px 28px;
+    font-size: 18px;
+    margin: 10px;
+    background-color: #00fff7;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+button:hover {
+    background-color: #fff;
+    color: #00fff7;
+    box-shadow: 0 0 35px rgba(0, 255, 255, 1);
+}
+
+.back-btn {
+    margin-top: 20px;
+    background-color: #00fff7;
+    color: #1a1a1a;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #fff;
+    color: #00fff7;
+}

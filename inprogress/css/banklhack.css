@@ -1,0 +1,47 @@
+/* Grid Layout */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 5px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Green Box Styles */
+.green {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+/* Red Box Styles */
+.red {
+    background-color: red;
+}
+
+/* Empty Box Styles */
+.empty {
+    background-color: white;
+}
+
+/* Instructions and Status */
+#status {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#restart-btn {
+    margin-top: 20px;
+}

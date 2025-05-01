@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Hack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Boost Hack Practice</h1>
+
+        <!-- Difficulty Selection -->
+        <div class="difficulty-container">
+            <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty">
+                <option value="4">4 Digits</option>
+                <!-- <option value="5">5 Digits</option>
+                <option value="6">6 Digits</option> -->
+            </select>
+        </div>
+
+        <!-- Input Fields -->
+        <div id="guess-container">
+            <!-- The number of input fields will change based on selected difficulty -->
+        </div>
+
+        <!-- Controls container for buttons -->
+        <div class="controls">
+            <button id="submit">Submit Guess</button>
+            <button id="new-game-btn">New Game</button>
+        </div>
+
+        <!-- Game Information -->
+        <div class="game-info">
+            <p id="guess-count">Guesses: 0</p>
+        </div>
+        
+        <!-- Timer Progress Bar -->
+        <div id="timer-bar-container">
+            <div id="timer-bar"></div>
+        </div>
+
+        <!-- Result container for displaying results -->
+        <div id="result-container"></div>
+
+        <!-- Previous Times -->
+        <div class="previous-times">
+            <h3>Previous Times</h3>
+            <ul id="previous-times-list"></ul>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
